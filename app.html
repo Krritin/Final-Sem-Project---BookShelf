@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Library Organizer</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Krritin's BookShelf</h1>
+            <div class="search-container">
+                <input type="text" 
+                       class="search-box" 
+                       placeholder="Search for books..."
+                       id="searchInput">
+                <button class="search-button" id="searchButton">Search</button>
+            </div>
+        </header>
+
+        <div class="filters">
+            <select class="filter-select" id="genreFilter">
+                <option value="">All Genres</option>
+                <option value="fiction">Fiction</option>
+                <option value="non-fiction">Non-Fiction</option>
+                <option value="mystery">Mystery</option>
+                <option value="science-fiction">Science Fiction</option>
+                <option value="fantasy">Fantasy</option>
+            </select>
+            <select class="filter-select" id="readingStatusFilter">
+                <option value="">All Status</option>
+                <option value="reading">Currently Reading</option>
+                <option value="to-read">To Read</option>
+                <option value="completed">Completed</option>
+            </select>
+        </div>
+
+        <div class="library-sections">
+            <button class="section-button active" data-section="all">All Books</button>
+            <button class="section-button" data-section="reading">Currently Reading</button>
+            <button class="section-button" data-section="to-read">To Read</button>
+            <button class="section-button" data-section="completed">Completed</button>
+        </div>
+
+        <div class="loading" id="loading">Loading...</div>
+        <div class="bookshelf" id="bookshelf"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
